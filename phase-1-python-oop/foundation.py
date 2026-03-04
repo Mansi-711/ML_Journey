@@ -983,27 +983,6 @@ print(l)
 
 # Implement binary search.
 l=[5, 1, 4, 2, 8, 3, 6, 9, 7, 10]
-n=len(l)
-num=int(input('enter the number(1-10) to search: '))
-for i in range(len(l)-1):
-    for j in range(len(l)-i-1):
-        if l[j]>l[j+1]:
-            l[j],l[j+1]=l[j+1],l[j]
-for i in l:
-    if num < l[n//2]:
-        l=l[:n//2]
-    else:
-        l=l[n//2:]
-    if n == i:
-        print('found')
-    else:
-        print('searching....')
-#3333333333333333333333333333333333333333333333333333333333333333
-#3333333333333333333333333333
-#3333333333333333333333333333
-#3333333333333333333333333333
-
-l=[5, 1, 4, 2, 8, 3, 6, 9, 7, 10]
 num = int(input('enter number to search from 1 to 10: '))
 l=l.sort()
 low = 0
