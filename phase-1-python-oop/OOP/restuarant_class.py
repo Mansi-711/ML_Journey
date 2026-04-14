@@ -9,20 +9,23 @@ class Restaurant():
     def open_restaurant(self):
         print(f'{self.name} is now open')
 
-    def customer_served(self):
+    def set_customer_served(self,num):
+        self.number_served = num
+        print(f'{self.name} has served {self.number_served} customers')
+        
+    def increment_customer_served(self,increment):
+        self.number_served += increment
         print(f'{self.name} has served {self.number_served} customers')
 
 r1 = Restaurant('Taj Mahal', 'Indian')
 r1.describe_restuarant()
 r1.open_restaurant()
-r1.customer_served()
-r1.number_served = 300
-r1.customer_served()
+r1.set_customer_served(300)
+r1.increment_customer_served(400)
 
 r2 = Restaurant('Osteria','Italian')
 r2.describe_restuarant()
 r2.open_restaurant()
-r2.customer_served()
-r2.number_served = 400
-r2.customer_served()
+r2.set_customer_served(400)
+r2.increment_customer_served(500)
 
