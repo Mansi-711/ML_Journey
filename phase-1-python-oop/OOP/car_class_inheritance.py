@@ -32,7 +32,11 @@ class Battery():
 
   def describe_battery(self):
     print('this car has a' + str(self.battery_size) + ' kWh battery')
-
+    
+  def upgrade_battery(self):
+    if self.battery_size != 85:
+      self.battery_size = 85
+      
   def get_range(self):
     if self.battery_size == 70:
       range = 240
@@ -57,4 +61,6 @@ class ElectricCar(Car):  #Inheritance ElectricCar is the child/base class of Car
 my_car = ElectricCar('Ford','model', 2000)
 print(my_car.get_descriptive_name())  #function of parent class called through the instance of child class
 my_car.battery.describe_battery()  #function of another class used by current class's instance due to instance is an attribute of current class
+my_car.battery.get_range()
+my_car.battery.upgrade_battery()
 my_car.battery.get_range()
